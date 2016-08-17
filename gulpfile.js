@@ -97,7 +97,8 @@ gulp.task('translate-extract', function () {
       lang: ['en-us', 'ru-ru'],   // array of languages
       dest: i18ndest,             // destination, default '.'
       safeMode: false,            // do not delete old translations, true - contrariwise, default false
-      stringifyOptions: true     // force json to be sorted, false - contrariwise, default false
+      stringifyOptions: true,   // force json to be sorted, false - contrariwise, default false
+      formatEmpty: '[MISSING] <%=s%>' // provide missing translations format
     }))
     .pipe(gulp.dest(i18ndest));
 });
